@@ -78,7 +78,7 @@ public class XMLCloner {
             Node feild = fieldNode.item(0);
             String dummyData = createDummyData(digitFields.contains(fName));
             feild.setTextContent(dummyData);
-            log.info(fName +": "+ dummyData);
+            log.info(fName + ": " + dummyData);
           }
         }
       }
@@ -104,6 +104,7 @@ public class XMLCloner {
     transformer.transform(source, result);
     log.info("XML file updated successfully");
   }
+
   /* Delete valid/Invalid dir if exist */
   private boolean deleteDirectory(File path) {
     if (path.exists()) {
